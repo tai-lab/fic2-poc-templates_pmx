@@ -1,0 +1,21 @@
+---
+name: Social Network SE
+description: see http://mediafi.org/?portfolio=social-network
+keywords: fic2, ppnet
+type: Default
+documentation: |
+  Ppnet + Nginx
+  ===
+  
+  ##Running
+  Browse to http://panamax.local:8000/
+images:
+  - name: Ppnet
+    source: fic2/ppnet
+    category: Web
+    type: Default
+    ports:
+      - host_port: '8000'
+        container_port: '80'
+        proto: TCP
+  
