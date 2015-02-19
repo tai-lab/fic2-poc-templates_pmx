@@ -36,8 +36,10 @@ images:
         value: postgres
       - variable: WORDPRESS_DB_PASSWORD
         value: a strong password
+      - variable: WORDPRESS_DB_HOST
+        value: postgresql:5432
     links:
       - service: postgresql
-        alias: POSTGRESQL
+        alias: postgresql
           
     
