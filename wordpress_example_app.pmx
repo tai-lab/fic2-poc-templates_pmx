@@ -4,24 +4,26 @@ description: just an example
 keywords: fic2, wordpress
 type: Default
 documentation: |
-  WordPress + PostgreSQL
+  WordPress + Mysql
   ===
 
   ##Running
   Browse to http://panamax.local:8001
 
 images:
-  - name: postgresql
-    source: postgres
+  - name: mysql
+    source: mysql
     category: DB tier
     type: sql
     expose:
-      - 5432
+      - 3306
     environment:
-      - variable: POSTGRES_USER
-        value: postgres
-      - variable: POSTGRES_PASSWORD
-        value: a strong password
+      - variable: MYSQL_USER
+        value: wordpress_user
+      - variable: MYSQL_PASSWORD
+        value: kridPynOosh2
+      - variable: MYSQL_DATABASE
+        value: wordpress
   
   - name: wordpress
     source: wordpress
@@ -33,13 +35,13 @@ images:
         proto: TCP
     environment:
       - variable: WORDPRESS_DB_USER
-        value: postgres
+        value: wordpress_user
       - variable: WORDPRESS_DB_PASSWORD
-        value: a strong password
+        value: kridPynOosh2
       - variable: WORDPRESS_DB_HOST
-        value: postgresql:5432
+        value: MYSQL:3306
     links:
-      - service: postgresql
-        alias: postgresql
+      - service: mysql
+        alias: MYSQL
           
     
