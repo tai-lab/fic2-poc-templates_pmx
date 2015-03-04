@@ -18,6 +18,8 @@ images:
     expose:
       - 3306
     environment:
+      - variable: MYSQL_ROOT_PASSWORD
+        value: Avaytoawt0odcaypkunWas9
       - variable: MYSQL_USER
         value: wordpress_user
       - variable: MYSQL_PASSWORD
