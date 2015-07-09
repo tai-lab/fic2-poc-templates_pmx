@@ -1,7 +1,7 @@
 ---
 name: Context Aware Recommendation instance
 description: The instance of the CAR SE composing two server modules.
-keywords: fic2, car
+keywords: fic2, car, Context Aware Recommendation
 type: Default
 documentation: |
   Context Aware Recommendation
