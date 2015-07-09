@@ -1,7 +1,7 @@
 ---
 name: WordPress example app
 description: just an example
-keywords: fic2, wordpress
+keywords: mediafi, wordpress
 type: Default
 documentation: |
   WordPress + Mysql

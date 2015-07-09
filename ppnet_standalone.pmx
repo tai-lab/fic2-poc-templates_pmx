@@ -1,7 +1,7 @@
 ---
 name: Social Network SE
 description: see http://mediafi.org/?portfolio=social-network
-keywords: fic2, ppnet
+keywords: mediafi, ppnet
 type: Default
 documentation: |
   Ppnet + Nginx
