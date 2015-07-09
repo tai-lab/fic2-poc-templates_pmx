@@ -1,4 +1,4 @@
---
+---
 name: Context Aware Recommendation instance
 description: The instance of the CAR SE composing two server modules.
 keywords: fic2, car
@@ -10,20 +10,20 @@ documentation: |
   Combine the `se_car_rmp` and the `se_car_acr` Docker images
 
 images:
-- name: recommender
-  source: fic2/se_car_rmp:latest
-  category: lci
-  type: Default
-  ports:
-  - container_port: '4545'
-    proto: TCP
-  links:
-  - service: activityrq
-    alias: activityrq
-- name: activityrq
-  source: fic2/se_car_acr:latest
-  category: lci
-  type: Default
-  ports:
-  - container_port: '8089'
-    proto: TCP
+  - name: recommender
+    source: fic2/se_car_rmp:latest
+    category: lci
+    type: Default
+    ports:
+      - container_port: '4545'
+        proto: TCP
+    links:
+      - service: activityrq
+        alias: activityrq
+  - name: activityrq
+    source: fic2/se_car_acr:latest
+    category: lci
+    type: Default
+    ports:
+      - container_port: '8089'
+        proto: TCP
